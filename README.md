@@ -6,4 +6,4 @@ Creating own / custom printf function!
 •	Pair Programming - How To - https://intranet.alxswe.com/concepts/121
 •	Flowcharts - https://intranet.alxswe.com/concepts/130
 •	Technical Writing - https://intranet.alxswe.com/concepts/225
-
+this projects is colabrating of sami and jordi
