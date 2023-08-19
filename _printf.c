@@ -1,10 +1,22 @@
+#include "main.h"
+
+/**
+ * _printf - creat printf function.
+ *
+ * @format: identifier to look for.
+ *
+ * Return: the length of the string.
+ */
+
 int _printf(const char *format, ...)
 {
 	va_list pfformats;
 	int a;
 	int length;
+	
 	va_start(pfformats, format);
 	length = 0;
+
 	while (*format)
 	{
 		if (*format == '%')
@@ -13,7 +25,7 @@ int _printf(const char *format, ...)
 			for (a = 0; specifiers[a].type != '\0'; a++)
 				if (*format == specifiers[a].type)
 				{
-					if (specifiers[i].type == 'c')
+					if (specifiers[a].type == 'c')
 					{
 						putchar(va_arg(pfformats, int));
 						length++;
@@ -37,7 +49,7 @@ int _printf(const char *format, ...)
 		putchar(*format);
 		length++;
 	}
-	format++
+	format++;
 }
 
 va_end(pfformats);

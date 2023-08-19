@@ -1,7 +1,15 @@
 #include "main.h"
 
-struct f_specifier specifiers[] = {
-     { 'c', NULL },
+/**
+ * f_specifier - format specifier
+ *
+ * @specififers: array of specifier
+ *
+ */
+
+struct f_specifier specifiers[] = { 
+
+     {'c', NULL },
      { 's', NULL },
      { '%', NULL },
      { 'r', NULL }, 
