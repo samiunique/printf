@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  * _printf - creat printf function.
@@ -13,7 +14,7 @@ int _printf(const char *format, ...)
 	va_list pfformats;
 	int a;
 	int length;
-	
+
 	va_start(pfformats, format);
 	length = 0;
 
@@ -23,6 +24,7 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			for (a = 0; specifiers[a].type != '\0'; a++)
+			{
 				if (*format == specifiers[a].type)
 				{
 					if (specifiers[a].type == 'c')
@@ -51,7 +53,6 @@ int _printf(const char *format, ...)
 	}
 	format++;
 }
-
 va_end(pfformats);
 return (length);
 }

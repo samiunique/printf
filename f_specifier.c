@@ -1,19 +1,17 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
- * f_specifier - format specifier
+ * f_specifier - Initialize format specifiers array.
  *
- * @specififers: array of specifier
+ * Description: Initializes an array of format specifiers.
  *
+ * Return: The array of format specifiers.
  */
-
-struct f_specifier specifiers[] = { 
-
-     {'c', NULL },
-     { 's', NULL },
-     { '%', NULL },
-     { 'r', NULL }, 
-     { '\0', NULL } 
- };
-
-                    
+struct f_specifier specifiers[] = {
+	{'c', NULL},
+	{'s', NULL},
+	{'%', NULL},
+	{'r', NULL},
+	{'\0', NULL}
+};
