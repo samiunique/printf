@@ -13,11 +13,11 @@ int _printf(const char *format, ...)
 {
 	va_list pfformats;
 	int a;
-	int length;
+	int length = 0;
+	char *ch;
 
 	va_start(pfformats, format);
-	length = 0;
-
+	
 	while (*format)
 	{
 		if (*format == '%')
@@ -34,8 +34,10 @@ int _printf(const char *format, ...)
 					}
 					else if (specifiers[a].type == 's')
 					{
-						fputs(va_arg(pfformats, char*), stdout);
-						length = length + strlen(va_arg(pfformats, char*));
+						ch = va_arg(pfformats, char*);
+								if (ch != NULL)
+								 fputs(ch, stdout);
+						length = length + strlen(ch);
 					}
 					else if (specifiers[a].type == '%')
 					{
