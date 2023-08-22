@@ -22,6 +22,4 @@ int handle_c(va_list);
 int handle_s(va_list);
 int handle_per();
 
-
-
 #endif

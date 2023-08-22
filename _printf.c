@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	f_specifier specifiers[] = {
 		{"c", handle_c},
 		{"s", handle_s},
-		{"%", handle_per},	
+		{"%", handle_per},
 		{NULL, NULL}
 	};
 	va_list arg_list;
