@@ -17,5 +17,6 @@ extern struct f_specifier specifiers[];
 
 int _printf(const char *format, ...);
 
+int _vprintf(const char *format, va_list pfformats);
 
 #endif
