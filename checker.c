@@ -11,7 +11,7 @@
  */
 int parser(const char *format, f_specifier specifiers[], va_list arg_list)
 {
-	int i, int j;
+	int i, j;
 	int r_val;
 	int print_out;
 
@@ -22,7 +22,7 @@ int parser(const char *format, f_specifier specifiers[], va_list arg_list)
 		{
 			for (j = 0; specifiers[j].type != NULL; j++)
 			{
-				if (format[i + 1] == specifiers[j].type[0]
+				if (format[i + 1] == specifiers[j].type[0])
 				{
 				r_val = specifiers[j].f(arg_list);
 				if (r_val == -1)

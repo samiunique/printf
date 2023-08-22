@@ -21,5 +21,6 @@ int _printf(const char *format, ...);
 int handle_c(va_list);
 int handle_s(va_list);
 int handle_per();
-
+int handle_i(va_list list);
+int print_number(va_list args);
 #endif
