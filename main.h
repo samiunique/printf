@@ -5,12 +5,16 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
+/**
+ * struct convert - format convertor
+ * @type: fun type
+ * @f: foemat sspec
+ */
 
 struct convert
 {
-        char *type;
-        int (*f)(va_list);
+	char *type;
+	int (*f)(va_list);
 };
 typedef struct convert f_specifier;
 
