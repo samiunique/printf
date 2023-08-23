@@ -9,8 +9,8 @@
 
 struct convert
 {
-        char *type;
-        int (*f)(va_list);
+	char *type;
+	int (*f)(va_list);
 };
 typedef struct convert f_specifier;
 
