@@ -16,37 +16,37 @@ int parser(const char *format, f_specifier specifiers[], va_list arg_list)
 	int print_out;
 
 	print_out = 0;
-	for (i = 0; format[i] != '\0'; i++)/* Iterates through the main str*/
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%') /*Checks for format specifiers*/
+		if (format[i] == '%')
 		{
 			for (j = 0; specifiers[j].type != NULL; j++)
 			{
 				if (format[i + 1] == specifiers[j].type[0])
 				{
-				r_val = specifiers[j].f(arg_list);
-				if (r_val == -1)
-				return (-1);
-				print_out = print_out + r_val;
-				break;
+					r_val = specifiers[j].f(arg_list);
+					if (r_val == -1)
+						return (-1);
+					print_out = print_out + r_val;
+					break;
 				}
-				}
-				if (specifiers[j].type == NULL && format[i + 1] != ' ')
+			}
+			if (specifiers[j].type == NULL && format[i + 1] != ' ')
+			{
+				if (format[i + 1] != '\0')
 				{
-					if (format[i + 1] != '\0')
-					{
-					putchar(format[i]);
+					putchar('%');
 					putchar(format[i + 1]);
-					print_out = print_out + 2;
-					}
-					else
+					print_out += 2;
+				}
+				else
 					return (-1);
-					}
-					i = i + 1; /*Updating i to skip format symbols*/
+			}
+			i = i + 1;
 		}
 		else
 		{
-			putchar(format[i]); /*call the write function*/
+			putchar(format[i]);
 			print_out++;
 		}
 	}
