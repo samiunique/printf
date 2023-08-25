@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"s", handle_s},
 		{"%", handle_per},
 		{"i", handle_i},
+		{"u", handle_u},
 		{"d", handle_i},
 		{NULL, NULL}
 	};
