@@ -16,6 +16,7 @@ int _printf(const char *format, ...)
 		{"%", handle_per},
 		{"i", handle_i},
 		{"d", handle_i},
+		{"u", handle_u},
 		{NULL, NULL}
 	};
 	va_list arg_list;
