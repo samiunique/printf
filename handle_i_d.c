@@ -10,7 +10,7 @@ int handle_i(va_list list)
 {
 	int num_length;
 
-	num_length = print_number(list);
+	num_length = print_number(list) + 1;
 	return (num_length);
 }
 
@@ -23,6 +23,6 @@ int handle_d(va_list list)
 {
 	int num_length;
 
-	num_length = print_number(list);
+	num_length = print_number(list) + 1;
 	return (num_length);
 }
