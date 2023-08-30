@@ -30,5 +30,14 @@ int handle_d(va_list list);
 int handle_i(va_list list);
 int print_number(va_list args);
 int handle_u(va_list list);
-int print_unsgined_number(unsigned int n);
+int handle_o(va_list list);
+int handle_x(va_list list);
+int handle_X(va_list list);
+
+
+
+int print_unsigned(unsigned int num);
+int print_octal(unsigned int num);
+int print_hexadecimal(unsigned int num, int uppercase);
+
 #endif
