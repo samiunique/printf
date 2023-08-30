@@ -43,6 +43,7 @@ int print_hexadecimal(unsigned int num, int uppercase)
 	char hex_digits[] = "0123456789abcdef";
 
 	if (uppercase)
+	{
 		hex_digits[10] = 'A';
 	count = 0;
 	if (num >= 16)
@@ -50,4 +51,12 @@ int print_hexadecimal(unsigned int num, int uppercase)
 	putchar(hex_digits[num % 16]);
 	return (count + 1);
 }
-
+	else
+{
+	count = 0;
+	if (num >= 16)
+	    count += print_hexadecimal(num / 16, uppercase);
+	putchar(hex_digits[num % 16]);
+	return (count + 1);
+}
+}
